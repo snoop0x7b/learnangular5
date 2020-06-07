@@ -18,7 +18,7 @@ export class AppComponent {
   artists: object;
 
   constructor() {
-    this.query = 'Barot';
+    this.query = '';
     this.artists = [
       {
         "name":"Barot Bellingham",
@@ -75,5 +75,9 @@ export class AppComponent {
         "bio":"A senior at the China International Art University, Xhou has become well-known for his miniature sculptures, often the size of a rice granule, that are displayed by rear projection of microscope images on canvas. Xhou will discuss the art and science behind his incredibly detailed works of art."
       }
     ]
+  }
+
+  showArtist($event, artist) {
+    this.query = artist.name;
   }
 }
