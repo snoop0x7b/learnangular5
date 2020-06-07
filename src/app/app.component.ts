@@ -2,7 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styles: [
+    `
+      .list-group-item:first-child {
+        border-top: 0;
+      }
+    `
+  ]
 })
 export class AppComponent {
   query: string;
