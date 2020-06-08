@@ -7,7 +7,7 @@
           <div class="form-label" *ngIf="query"><strong>For:</strong>
             {{ query }}
           </div>
-          <input class="form-control mt-2" type="text">
+          <input class="form-control mt-2" type="text" [(ngModel)]="query">
         </div><!-- form-group -->
       </div><!-- card-body -->
     </div><!-- card -->
@@ -22,7 +22,7 @@
             (click)="showArtist(artist)"
             [style.backgroundColor]="artist.highlight ? '#EEE' : '#FFF'">
               <div class="media">
-                <img class="mr-3 rounded align-self-center img-fluid" 
+                <img class="mr-3 rounded align-self-center img-fluid"
                   style="width:70px;" [src]="'./assets/images/' + artist.shortname + '_tn.jpg'" alt="{{ 'Photo of ' + artist.name }}">
                 <div class="media-body align-self-center">
                   <h5 class="m-0">{{ artist.name }}</h5>
